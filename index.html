@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рандомайзер Terraria</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">🎲 Рандомайзер Terraria</h1>
+            <p class="subtitle">Генерируй случайные настройки для нового приключения!</p>
+        </header>
+
+        <div class="controls">
+            <div class="control-group">
+                <h2>⚙️ Настройки рандомизации</h2>
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="worldSettings" checked>
+                        <span class="checkmark"></span>
+                        Настройки мира
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="characterDifficulty" checked>
+                        <span class="checkmark"></span>
+                        Сложность персонажа
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="characterClass" checked>
+                        <span class="checkmark"></span>
+                        Класс персонажа
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="characterSubclass" checked>
+                        <span class="checkmark"></span>
+                        Подкласс персонажа
+                    </label>
+                </div>
+            </div>
+
+            <button id="randomizeBtn" class="randomize-btn">
+                🎲 Рандомизировать!
+            </button>
+        </div>
+
+        <div class="results" id="results">
+            <div class="result-card">
+                <h3>🌍 Настройки мира</h3>
+                <div class="result-content" id="worldResult">
+                    <p>Нажмите "Рандомизировать!" для генерации</p>
+                </div>
+            </div>
+
+            <div class="result-card">
+                <h3>👤 Персонаж</h3>
+                <div class="result-content" id="characterResult">
+                    <p>Нажмите "Рандомизировать!" для генерации</p>
+                </div>
+            </div>
+
+            <div class="result-card">
+                <h3>⚔️ Класс и специализация</h3>
+                <div class="result-content" id="classResult">
+                    <p>Нажмите "Рандомизировать!" для генерации</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info">
+            <details>
+                <summary>ℹ️ Как редактировать настройки</summary>
+                <p>Все варианты выбора можно редактировать в файле <code>config.json</code>:</p>
+                <ul>
+                    <li><strong>worldSettings</strong> - настройки мира (размеры, сложности, заражения)</li>
+                    <li><strong>characterDifficulty</strong> - сложности персонажа</li>
+                    <li><strong>characterClass</strong> - классы персонажей</li>
+                    <li><strong>characterSubclass</strong> - подклассы для каждого класса</li>
+                </ul>
+                <p>Измените значения в JSON файле и перезагрузите страницу для применения изменений.</p>
+            </details>
+        </div>
+
+        <footer>
+            <p>Создано для любителей Terraria ❤️</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
