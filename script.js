@@ -24,14 +24,11 @@ class TerrariaRandomizer {
     setupEventListeners() {
         const randomizeBtn = document.getElementById('randomizeBtn');
         randomizeBtn.addEventListener('click', () => this.randomize());
-
-        // Не добавляем обработчики change для чекбоксов - пользователь должен сам ими управлять
     }
 
     initializeCheckboxes() {
         if (!this.config) return;
 
-        // Устанавливаем начальные значения чекбоксов из конфигурации (только один раз)
         Object.keys(this.config).forEach(key => {
             const checkbox = document.getElementById(key);
             if (checkbox) {
